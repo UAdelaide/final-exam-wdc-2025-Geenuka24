@@ -116,8 +116,10 @@ body {
 
 @keyframes pulseBackground{
   0%{
-    background-color: ;
+    background-color: darkgrey;
   }
+  50%{background-color: orange;}
+  
 }
 
 
