@@ -27,7 +27,7 @@ body {
   overflow: hidden;
   white-space: nowrap;
   animation: slide 20s linear infinite,
-  fla;
+  flashText 1s infinite;
 }
 
 a {
