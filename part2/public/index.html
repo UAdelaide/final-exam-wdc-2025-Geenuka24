@@ -59,7 +59,8 @@
             });
             if(response.ok){
               const data = await response.text();
-              alert('Welcome ${data}`)
+              alert(`Welcome ${data}`);
+              window.location.href='/'
             }
           }
         }
