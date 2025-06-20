@@ -94,7 +94,9 @@ body {
   66%{
     color: blueviolet;
   }
-  
+  100%{
+    color: green;
+  }
 }
 
 
