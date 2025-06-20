@@ -83,7 +83,8 @@ let db;
 // API DOGS
 app.get('/api/dogs', async(req,res)=>{
     try{
-        var[rows]=await db.execute(``)
+        var[rows]=await db.execute(`
+            SELECT d.name AS `)
     }
 })
 module.exports = app;
