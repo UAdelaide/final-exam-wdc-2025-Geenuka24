@@ -15,8 +15,8 @@ router.get('/', async (req, res) => {
 // POST a new user (simple signup)
 router.post('/register', async (req, res) => {
   const {
- username, email, password, role
-} = req.body;
+    username, email, password, role
+  } = req.body;
 
   try {
     const [result] = await db.query(`
@@ -50,9 +50,9 @@ router.post('/login', async (req, res) => {
     if (rows.length === 0) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
-    const user=rows[0];
-    req.session.user={ id: user.user_id, username: user.username, role: user.role };
-    const redirectURl=user.role ==='owner'? '/owner-dashboard.html': '/walker-dashboard.html';
+    const user = rows[0];
+    req.session.user = { id: user.user_id, username: user.username, role: user.role };
+    const redirectURl = user.role === 'owner' ? '/owner-dashboard.html' : '/walker-dashboard.html';
     res.redirect(redirectURl);
     // res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
