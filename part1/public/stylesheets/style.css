@@ -76,7 +76,9 @@ body {
 
 @keyframes slide {
   0% {
-    transform:trans
+    transform: translateX(100%);
+  }
+
 }
 
 
