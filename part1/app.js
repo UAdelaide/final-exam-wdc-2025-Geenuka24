@@ -59,7 +59,7 @@ let db;
                 (SELECT user_id FROM Users WHERE username = 'kobe824'),'Mamba', 'large'),
                 (SELECT user_id FROM Users WHERE username = 'carol'),'foo', 'large');
                 `);
-        }
+            }
     }
 });
 module.exports = app;
