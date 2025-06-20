@@ -131,8 +131,10 @@ app.get('api/walkers/summary', async(req,res)=>{
             LEFT JOIN WalkApplications ON Users.userid=WalkApplications.walker_id AND WalkApplications.status='accepted
             LEFT JOIN WalkRequests ON WalkRequests.request_id=WalkRatings.request_id
             WHERE Users.role='walker'
-            GROUP BY Users.user_id, Users.username`
-        )
+            GROUP BY Users.user_id, Users.username
+            ORDER BY Users.username`);
     }
+    res.json(rows);
+    
 })
 module.exports = app;
