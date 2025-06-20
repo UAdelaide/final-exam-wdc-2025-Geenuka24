@@ -50,7 +50,9 @@ let db;
 
         // Dogs table
         var [dogRows]= await db.execute('SELECT COUNT(*) AS count FROM Dogs');
-        if(dog)
+        if(dogRows[0].count ===0){
+            await db.
+        }
     }
 });
 module.exports = app;
