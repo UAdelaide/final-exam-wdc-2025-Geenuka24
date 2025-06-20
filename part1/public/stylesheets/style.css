@@ -101,8 +101,12 @@ body {
 
 @keyframes rainbowBorder{
   0%{
-    border-color: ;
+    border-color: crimson;
   }
+  20%{
+    border-color: darkorange;
+  }
+  
 }
 
 
