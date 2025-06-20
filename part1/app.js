@@ -74,14 +74,13 @@ let db;
                     `);
                 }
                 console.log('Database setup  is working');
-            }
-            catch (err){
+            } catch (err){
                 console.error("error setting up the database", err);
             }
 })();
 
 // API DOGS
-app.get('/api/dogs', async(req,res)=>{
+app.get('/api/dogs', async(req,res) => {
     try{
         var[rows]=await db.execute(`
             SELECT Dogs.name dog_name, Dogs.size, Users.usersname owners_usersname
@@ -89,14 +88,13 @@ app.get('/api/dogs', async(req,res)=>{
             JOIN Users ON Dogs.owners_id = Users.user_id
             ORDER BY Dogs.name`);
             res.json(rows);
-    }
-    catch(err){
-        res.status(500).json({error: 'Failed to fetch dogs'});
+    } catch(err){
+        res.status(500).json({ error: 'Failed to fetch dogs' });
     }
 });
 
 // API  WALKREQUESTS
-app.get('/api/walkrequests/open', async(req,res)=> {
+app.get('/api/walkrequests/open', async(req,res) => {
     try{
         var[rows]=await db.execute(`
             SELECT
@@ -112,14 +110,13 @@ app.get('/api/walkrequests/open', async(req,res)=> {
             WHERE WalkRequests.status = 'open
             ORDER BY WalkRequests.requested_time`);
             res.json(rows);
-    }
-    catch (err){
-        res.status(500).json({error: 'Failed to open walkrequeest '});
+    } catch (err){
+        res.status(500).json({ error: 'Failed to open walkrequeest ' });
     }
 });
 
 // API WALKERS SUMMARY
-app.get('api/walkers/summary', async(req,res)=>{
+app.get('api/walkers/summary', async(req,res) => {
     try{
         var[rows]=await db.execute(`
             SELECT
@@ -134,9 +131,8 @@ app.get('api/walkers/summary', async(req,res)=>{
             GROUP BY Users.user_id, Users.username
             ORDER BY Users.username`);
             res.json(rows);
+    } catch(err){
+        res.status(500).json({ error: 'Failed to take walkers summary' });
     }
-    catch(err){
-        res.status(500).json({error:'Failed to take walkers summary '})
-    }
-})
+});
 module.exports = app;
