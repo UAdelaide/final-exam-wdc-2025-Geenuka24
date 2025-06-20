@@ -112,7 +112,9 @@ app.get('/api/walkrequests/open', async(req,res)=> {
             WHERE WalkRequests.status = 'open
             ORDER BY WalkRequests.requested_time`);
             res.json(rows);
-
+    }
+    catch (err){
+        res.status(500).json({error})
     }
 })
 module.exports = app;
