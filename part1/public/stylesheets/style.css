@@ -40,7 +40,7 @@ body {
   position: absolute;
   top: 150px;
   left: 20px;
-  color: #cccccc;
+  color:
   font-size: 14px;
   opacity: 0;
   transition: opacity 0.5s;
@@ -138,7 +138,7 @@ body {
 }
 
 .dog-details-section:hover{
-  opacity: 5;
+  opacity: 2;
 }
 
 .action-button{
