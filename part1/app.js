@@ -83,7 +83,7 @@ let db;
 app.get('/api/dogs', async(req,res) => {
     try{
         var[rows]=await db.execute(`
-            SELECT Dogs.name AS dog_name, Dogs.size, Users.username owners_usersname
+            SELECT Dogs.name AS dog_name, Dogs.size, Users.username owners_username
             FROM Dogs
             JOIN Users ON Dogs.owners_id = Users.user_id
             ORDER BY Dogs.name`);
