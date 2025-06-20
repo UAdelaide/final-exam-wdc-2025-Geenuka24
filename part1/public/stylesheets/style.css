@@ -42,7 +42,7 @@ body {
   left: 20px;
   color:#cccccc;
   font-size: 14px;
-  opacity: 0;
+  /* opacity: 0; */
   transition: opacity 0.5s;
   background-color: #e0e0e0;
   padding: 10px;
