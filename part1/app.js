@@ -133,7 +133,7 @@ app.get('/api/walkers/summary', async (req, res) => {
             ORDER BY Users.username`);
         res.json(rows);
     } catch (err) {
-        res.status(500).json({ error: 'Failed to take walkers summary' });
+        res.status(500).json({ error: 'Failed to fetch  walkers summary api' });
     }
 });
 module.exports = app;
