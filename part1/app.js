@@ -90,5 +90,8 @@ app.get('/api/dogs', async(req,res)=>{
             ORDER BY Dogs.name`);
             res.json(rows);
     }
+    catch(err){
+        res.status(500).json()
+    }
 })
 module.exports = app;
