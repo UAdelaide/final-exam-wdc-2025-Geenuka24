@@ -81,5 +81,5 @@ let db;
 })();
 
 // API DOGS
-app.get()
+app.get('/api/dogs', async)
 module.exports = app;
