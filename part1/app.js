@@ -101,7 +101,7 @@ app.get('/api/walkrequests/open', async(req,res) => {
             WalkRequests.request_id,
             Dogs.name dog_name,
             WalkRequests.requested_time,
-            WalkRequests.durtion_mintues,
+            WalkRequests.duration_mintues,
             WalkRequests.location,
             Users.username owner_username
             FROM WalkRequests
