@@ -61,7 +61,7 @@ let db;
                 `);
             }
             // WalkRequests
-            const
+            const [requestRows]= await db.execute()
     }
 });
 module.exports = app;
