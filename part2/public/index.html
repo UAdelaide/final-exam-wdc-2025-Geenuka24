@@ -15,7 +15,8 @@
     <p class="lead">Connect with trusted walkers for your beloved dog!</p>
     <form @submit.prevent="login" class="mt-4">
       <div class="mb-3">
-        <label for="username" class="form-label"
+        <label for="username" class="form-label">Username</label>
+        <input v-model="username"
       </div>
     </form>
     <!-- delete this -->
