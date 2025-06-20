@@ -84,7 +84,7 @@ let db;
 app.get('/api/dogs', async(req,res)=>{
     try{
         var[rows]=await db.execute(`
-            SELECT d.name AS `)
+            SELECT d.name AS dog_name, d.size, u.username AS `)
     }
 })
 module.exports = app;
