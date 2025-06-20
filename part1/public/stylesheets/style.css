@@ -148,7 +148,3 @@ body {
   cursor: pointer;
   animation: move 2s infinite alternate;
 }
-
-a {
-  color: #00B7FF;
-}
