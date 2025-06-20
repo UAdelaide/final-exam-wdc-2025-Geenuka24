@@ -79,4 +79,7 @@ let db;
                 console.error("error setting up the database", err);
             }
 })();
+
+// API DOGS
+app.get()
 module.exports = app;
