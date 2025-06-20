@@ -19,9 +19,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 var dbConfig = {
-  host: 'localhost',
-  user: 'root',
+  host:'localhost',
+  user:'root',
   password: ,
-  database
+  database:'DogWalkService'
 
 module.exports = app;
