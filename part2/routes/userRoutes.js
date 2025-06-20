@@ -53,8 +53,8 @@ router.post('/login', async (req, res) => {
     const user = rows[0];
     req.session.user = { id: user.user_id, username: user.username, role: user.role };
     const redirectURl = user.role === 'owner' ? '/owner-dashboard.html' : '/walker-dashboard.html';
-    res.redirect(redirectURl);
-    // res.json({ message: 'Login successful', user: rows[0] });
+    // res.redirect(redirectURl);
+    res.json({ message: 'Login successful', role});
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
   }
