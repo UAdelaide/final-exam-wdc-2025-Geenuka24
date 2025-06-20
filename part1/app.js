@@ -119,5 +119,9 @@ app.get('/api/walkrequests/open', async(req,res)=> {
 });
 
 // API WALKERS SUMMARY
-app.get('api/walkers/summary', async)
+app.get('api/walkers/summary', async(req,res)=>{
+    try{
+        
+    }
+})
 module.exports = app;
