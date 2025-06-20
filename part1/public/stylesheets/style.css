@@ -121,7 +121,11 @@ body {
   50%{background-color: orange;}
   100%{background-color: salmon;}
 }
-
+@keyframes move{
+  0%{
+    transform: :translateX(0);
+  }
+}
 
 
 
