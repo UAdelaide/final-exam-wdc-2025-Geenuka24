@@ -19,12 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-var dbConfig = {
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'DogWalkService'
-};
 
 
 module.exports = app;
