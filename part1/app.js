@@ -110,7 +110,9 @@ app.get('/api/walkrequests/open', async(req,res)=> {
             JOIN Dogs ON WalkRequests.dog_id =Dogs.dog_id
             JOIN Users ON Dogs.owner_id= Users.user_id
             WHERE WalkRequests.status = 'open
-            ORDER BY WalkRequests.request`)
+            ORDER BY WalkRequests.requested_time`);
+            res.json(rows);
+
     }
 })
 module.exports = app;
