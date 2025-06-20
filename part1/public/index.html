@@ -33,21 +33,21 @@
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
-        const{ createApp }= Vue;
+        const { createApp } = Vue;
         createApp({
-            data(){
-                return{
-                    dogImage:null
+            data() {
+                return {
+                    dogImage: null
                 };
             },
-            mounted(){
+            mounted() {
                 fetch('https://dog.ceo/api/breeds/image/random').then(response => response.json())
-                .then(data=>{
-                    this.dogImage=data.message;
-                })
-                .catch(error => {
-                    console.error("Dog image error", error);
-                });
+                    .then(data => {
+                        this.dogImage = data.message;
+                    })
+                    .catch(error => {
+                        console.error("Dog image error", error);
+                    });
             }
         }).mount('#app');
     </script>
