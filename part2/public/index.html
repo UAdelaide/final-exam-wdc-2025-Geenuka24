@@ -20,7 +20,7 @@
 
       </div>
       <div class="mb-3">
-        <label for="password_hash" class="form-label">Password</label>
+        <label for="password" class="form-label">Password</label>
         <input v-model="password" type="password" class="form-control" id="password" style="background-color: #ffffe0; border: 2px solid #0d6efd;">
       </div>
       <button type="submit" class="btn btn-outline-primary">Log <Input:email></Input:email></button>
@@ -45,7 +45,7 @@
       },
       methods:{
         async login(){
-          if(!this.username || this.password_hash){
+          if(!this.username || this.password){
             alert('Please enter username and password');
             return;
           }
@@ -55,7 +55,7 @@
               headers: {
                 'Content-Type':'application/json',
               },
-              body: JSON.stringify({user: this.username, pass:this.password_hash}),
+              body: JSON.stringify({user: this.username, pass:this.password}),
             });
             if(response.ok){
               const data = await response.text();
