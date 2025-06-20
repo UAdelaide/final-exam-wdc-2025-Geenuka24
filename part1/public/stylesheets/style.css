@@ -28,7 +28,12 @@ body {
   white-space: nowrap;
   animation: slide 20s linear infinite,
   flashText 1s infinite, flickerBackground 0.5s infinite;
-  
+
+}
+
+.dog-image-section{
+  margin-top:100px;
+  animation: ;
 }
 
 a {
