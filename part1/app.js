@@ -107,7 +107,8 @@ app.get('/api/walkrequests/open', async(req,res)=> {
             WalkRequests.location,
             Users.username owner_username
             FROM WalkRequests
-            JOIN Dogs ON WalkRequest`)
+            JOIN Dogs ON WalkRequests.dog_id =Dogs.dog_id
+            `)
     }
 })
 module.exports = app;
