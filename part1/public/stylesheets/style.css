@@ -47,6 +47,7 @@ body {
   background-color: #a10c0c;
   padding: 10px;
   animation: pulseBackground 15s infinite, flickerBackground 10s infinite;
+  z-index: 15;
 }
 
 .action-button-section {
