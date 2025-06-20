@@ -62,8 +62,11 @@
               alert(`Welcome ${data}`);
               window.location.href='/owner-dashboard.html';
             }
-            else
+            else{
+              alert('Login failed');
+            }
           }
+          catch(erro)
         }
       }
     }).mount('#app');
