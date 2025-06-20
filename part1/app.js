@@ -37,7 +37,7 @@ async()=>{
             database:'DogWalkService'
         });
 
-        var [userRows]
+        var [userRows]= await.db.execute('S')
     }
 }
 module.exports = app;
