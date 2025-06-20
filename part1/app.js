@@ -39,7 +39,8 @@ let db;
 
         var [userRows]= await db.execute('SELECT COUNT(*) AS count FROM Users');
         if(userRows[0].count ===0){
-            await db.execute(`INSERT INTO Users (username,email,password_hash, role)`)
+            await db.execute(`INSERT INTO Users (username,email,password_hash, role)
+                VALUES ()`)
         }
     }
 });
