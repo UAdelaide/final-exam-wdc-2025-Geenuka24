@@ -49,7 +49,7 @@ let db;
         }
 
         // Dogs table
-        var [dogRows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
+        // var [dogRows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
         if (dogRows[0].count === 0) {
             await db.execute(`
                 INSERT INTO Dogs(owner_id, name, size)
@@ -60,8 +60,8 @@ let db;
                 (SELECT user_id FROM Users WHERE username = 'carol'),'foo', 'large');
                 `);
             }
+            // WalkRequests
 
-            // 
     }
 });
 module.exports = app;
