@@ -98,7 +98,8 @@ app.get('/api/dogs', async(req,res)=>{
 // API  WALKREQUESTS
 app.get('/api/walkrequests/open', async(req,res)=> {
     try{
-        var[rows]=await.db
+        var[rows]=await db.execute(`
+            SELECT`)
     }
 })
 module.exports = app;
