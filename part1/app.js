@@ -96,5 +96,5 @@ app.get('/api/dogs', async(req,res)=>{
 });
 
 // API  WALKREQUESTS
-
+app.get('/api/walkrequest')
 module.exports = app;
