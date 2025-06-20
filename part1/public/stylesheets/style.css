@@ -60,7 +60,12 @@ body {
   0%{
     background-color: #ff69b4;
   }
-  33%
+  33%{
+    background-color: #00ff00;
+  }
+  66%{
+    background-color: ;
+  }
 }
 
 a {
