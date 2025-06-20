@@ -81,5 +81,9 @@ let db;
 })();
 
 // API DOGS
-app.get('/api/dogs', async)
+app.get('/api/dogs', async(this.request,res)=>{
+    try{
+        var[rows]=await
+    }
+})
 module.exports = app;
