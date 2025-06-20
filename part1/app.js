@@ -63,7 +63,7 @@ let db;
             // WalkRequests
             const [requestRows]= await db.execute('SELECT COUNT(*) AS count FROM Dogs');
             if(requestRows[0].count ===0){
-                await db.exec
+                await db.execute(``)
             }
     }
 });
