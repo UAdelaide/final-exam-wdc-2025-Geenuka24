@@ -29,6 +29,6 @@ async()=>{
             password: ''
         });
     }
-    aw
+    await connection.query
 }
 module.exports = app;
