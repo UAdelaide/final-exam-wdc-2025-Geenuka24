@@ -37,14 +37,14 @@ body {
 }
 
 .dog-details-section {
-  position:
+  position: absolute;
   top: 150px;
   left: 20px;
   color:purple;
   font-size: 14px;
   opacity: 0;
   transition: opacity 15s;
-  background-color: #e0e0e0;
+  background-color: #a10c0c;
   padding: 10px;
   animation: pulseBackground 15s infinite, flickerBackground 10s infinite;
 }
