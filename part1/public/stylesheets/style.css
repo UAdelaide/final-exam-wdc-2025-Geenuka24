@@ -134,8 +134,10 @@ body {
   width: 300px;
   height: auto;
   border: 5px solid;
-  animation: ;
+  animation: rainbowBorder 2s infinite;
 }
+
+.dog-details
 
 a {
   color: #00B7FF;
