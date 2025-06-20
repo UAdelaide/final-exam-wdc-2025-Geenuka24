@@ -88,8 +88,13 @@ body {
     color:#00ff00;
   }
   33%{
-    color: ;
+    color: #ff69b4;
   }
+
+  66%{
+    color: blueviolet;
+  }
+  
 }
 
 
