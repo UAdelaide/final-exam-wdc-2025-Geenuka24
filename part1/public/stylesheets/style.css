@@ -16,7 +16,10 @@ body {
   animation: flickerBackground 0.5s infinite;
 }
 
-.flicker
+.flicker-section{
+  position:absolute;
+  
+}
 
 a {
   color: #00B7FF;
