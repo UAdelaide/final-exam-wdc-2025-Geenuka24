@@ -109,7 +109,8 @@ body {
   40%{
     border-color: hotpink;
   }
-  60%{border-color: ;}
+  60%{border-color: magenta;}
+  80%{border-color: ;}
 }
 
 
