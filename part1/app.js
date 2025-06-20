@@ -100,7 +100,9 @@ app.get('/api/walkrequests/open', async(req,res)=> {
     try{
         var[rows]=await db.execute(`
             SELECT
-            WalkRequests.request`)
+            WalkRequests.request_id,
+            Dogs.name dog_name,
+            WalkRequests`)
     }
 })
 module.exports = app;
