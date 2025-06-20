@@ -133,7 +133,10 @@ app.get('api/walkers/summary', async(req,res)=>{
             WHERE Users.role='walker'
             GROUP BY Users.user_id, Users.username
             ORDER BY Users.username`);
-            res.json
+            res.json(rows);
+    }
+    catch(err){
+        res.status(500).json()
     }
 })
 module.exports = app;
