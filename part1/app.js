@@ -131,7 +131,7 @@ app.get('api/walkers/summary', async(req,res)=>{
             LEFT JOIN WalkApplications ON Users.userid=WalkApplications.walker_id AND WalkApplications.status='accepted
             LEFT JOIN WalkRequests ON WalkRequests.request_id=WalkRatings.request_id
             WHERE Users.role='walker'
-            GROUP BY Users`
+            GROUP BY Users.user_id, Users.username`
         )
     }
 })
