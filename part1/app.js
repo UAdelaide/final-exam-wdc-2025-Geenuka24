@@ -116,7 +116,7 @@ app.get('/api/walkrequests/open', async(req,res) => {
 });
 
 // API WALKERS SUMMARY
-app.get('api/walkers/summary', async(req,res) => {
+app.get('/api/walkers/summary', async(req,res) => {
     try{
         var[rows]=await db.execute(`
             SELECT
