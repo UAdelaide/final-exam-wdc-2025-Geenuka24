@@ -46,6 +46,7 @@ let db;
                 ('kobe824', 'kobe@example.com', 'hashed007', 'walker'),
                 ('jordan623', 'jordan@example.com', 'hashed824', 'owner')`);
         }
+        const
     }
 });
 module.exports = app;
