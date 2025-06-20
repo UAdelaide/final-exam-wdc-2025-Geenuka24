@@ -100,7 +100,7 @@ app.get('/api/walkrequests/open', async(req,res)=> {
     try{
         var[rows]=await db.execute(`
             SELECT Users.username walker_username,
-            COUNT`)
+            COUNT(WalkRatings.rating) total_ratings,`)
     }
 })
 module.exports = app;
