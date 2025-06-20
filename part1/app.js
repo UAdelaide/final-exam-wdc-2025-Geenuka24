@@ -34,8 +34,8 @@ async()=>{
             host:'localhost',
             user:'root',
             password:'',
-            database:''
-        })
+            database:'DogWalkService'
+        });
     }
 }
 module.exports = app;
