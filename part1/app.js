@@ -129,7 +129,7 @@ app.get('api/walkers/summary', async(req,res)=>{
             SUM(CASE WHEN WalkRequest.status='completed' THEN 1 ELSE 0 END) completed_walks
             FROM Users
             LEFT JOIN WalkApplications ON Users.userid=WalkApplications.walker_id AND WalkApplications.status='accepted
-            LEFT JOIN W`)
+            LEFT JOIN WalkRequests ON WalkRequests.request_id`)
     }
 })
 module.exports = app;
