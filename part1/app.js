@@ -106,7 +106,8 @@ app.get('/api/walkrequests/open', async(req,res)=> {
             WalkRequests.durtion_mintues,
             WalkRequests.location,
             Users.username owner_username
-            `)
+            FROM WalkRequests
+            JOIN Dogs ON WalkRequest`)
     }
 })
 module.exports = app;
