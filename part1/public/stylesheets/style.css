@@ -84,7 +84,12 @@ body {
 }
 
 @keyframes flashText{
-  0%
+  0%{
+    color:#00ff00;
+  }
+  33%{
+    color: ;
+  }
 }
 
 
