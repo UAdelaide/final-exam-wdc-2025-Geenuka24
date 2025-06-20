@@ -30,7 +30,7 @@ async()=>{
         });
         await connection.query("CREATE DATABASE IF NOT EXITS DogWalkService");
         await connection.end();
-
+        db=await
     }
 }
 module.exports = app;
