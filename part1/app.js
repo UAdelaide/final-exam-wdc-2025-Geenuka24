@@ -128,7 +128,7 @@ app.get('api/walkers/summary', async(req,res)=>{
             AVG(WalkRating.rating) average_rating,
             SUM(CASE WHEN WalkRequest.status='completed' THEN 1 ELSE 0 END) completed_walks
             FROM Users
-            LEFT JOIN WalkApplications ON Users.userid=WalkAP`)
+            LEFT JOIN WalkApplications ON Users.userid=WalkApplications.walker_id`)
     }
 })
 module.exports = app;
