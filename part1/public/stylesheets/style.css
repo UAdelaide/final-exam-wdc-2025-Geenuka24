@@ -46,7 +46,7 @@ body {
   transition:opacity 0.5s;
   background-color: #e0e0e0;
   padding: 10px;
-  animation: pulseBackgrounf;
+  animation: pulseBackground 1.5s infinite, flickerBackground 0.5s infinite;
 }
 
 a {
