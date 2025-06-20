@@ -26,7 +26,8 @@ body {
   font-size: 12px;
   overflow: hidden;
   white-space: nowrap;
-  ani
+  animation: slide 20s linear infinite,
+  fla;
 }
 
 a {
