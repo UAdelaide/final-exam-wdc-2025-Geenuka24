@@ -74,7 +74,9 @@ let db;
                     `);
                 }
                 console.log('Database setup  is working');
+            }
+            catch (err){
                 
-    }
+            }
 });
 module.exports = app;
