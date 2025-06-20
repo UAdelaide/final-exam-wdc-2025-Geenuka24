@@ -21,7 +21,9 @@ app.use('/users', usersRouter);
 
 let db;
 
-(async()=>{
-
-});
+async()=>{
+    try{
+        
+    }
+}
 module.exports = app;
