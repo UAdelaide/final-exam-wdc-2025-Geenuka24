@@ -130,7 +130,12 @@ body {
   }
 }
 
-.dog
+.dog-image{
+  width: 300px;
+  height: auto;
+  border: 5px solid;
+  animation: ;
+}
 
 a {
   color: #00B7FF;
