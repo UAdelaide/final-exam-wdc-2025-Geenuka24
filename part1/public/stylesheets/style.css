@@ -56,7 +56,11 @@ body {
   animation:flickerBackground 0.5s infinite;
 }
 
-@keyframes fl
+@keyframes flickerBackground{
+  0%{
+    
+  }
+}
 
 a {
   color: #00B7FF;
