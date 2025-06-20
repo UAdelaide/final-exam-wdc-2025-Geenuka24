@@ -37,6 +37,7 @@ let db;
             database:'DogWalkService'
         });
 
+        // Users
         var [userRows]= await db.execute('SELECT COUNT(*) AS count FROM Users');
         if(userRows[0].count ===0){
             await db.execute(`INSERT INTO Users (username,email,password_hash, role)
@@ -46,7 +47,8 @@ let db;
                 ('kobe824', 'kobe@example.com', 'hashed007', 'walker'),
                 ('jordan623', 'jordan@example.com', 'hashed824', 'owner')`);
         }
-        const
+
+        // Dogs table
     }
 });
 module.exports = app;
