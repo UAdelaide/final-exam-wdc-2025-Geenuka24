@@ -135,5 +135,5 @@ app.get('api/walkers/summary', async(req,res) => {
         res.status(500).json({ error: 'Failed to take walkers summary' });
     }
 });
-app.use
+app.use(express.static(path.join(__dirname,)))
 module.exports = app;
