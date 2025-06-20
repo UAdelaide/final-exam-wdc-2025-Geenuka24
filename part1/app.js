@@ -20,6 +20,7 @@ app.use('/users', usersRouter);
 
 var dbConfig = {
   host: 'localhost',
-  user: 'root'
+  user: 'root',
+  password
 
 module.exports = app;
