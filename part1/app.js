@@ -85,7 +85,7 @@ app.get('/api/dogs', async(req,res) => {
         var[rows]=await db.execute(`
             SELECT Dogs.name dog_name, Dogs.size, Users.username owners_username
             FROM Dogs
-            JOIN Users ON Dogs.owners_id = Users.user_id
+            JOIN Users ON Dogs.owner_id = Users.user_id
             ORDER BY Dogs.name`);
             res.json(rows);
     } catch(err){
