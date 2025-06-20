@@ -7,6 +7,9 @@ const app = express();
 
 // Middleware
 app.use(express.json());
+app.use(session{
+    
+})
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Routes
