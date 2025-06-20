@@ -37,7 +37,7 @@ let db;
             database:'DogWalkService'
         });
 
-        var [userRows]= await db.execute('SELECT ')
+        var [userRows]= await db.execute('SELECT COUNT(*)')
     }
 })
 module.exports = app;
