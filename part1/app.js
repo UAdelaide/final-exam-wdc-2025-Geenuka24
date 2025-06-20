@@ -37,7 +37,7 @@ let db;
             database:'DogWalkService'
         });
 
-        var [userRows]= await.db.execute('S')
+        var [userRows]= await db.execute('SELECT ')
     }
 })
 module.exports = app;
