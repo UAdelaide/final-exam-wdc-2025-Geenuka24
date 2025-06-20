@@ -75,8 +75,6 @@ let db;
                 }
                 console.log('Database setup  is working');
             }
-            catch (err){
-                
-            }
+            catch (err)
 });
 module.exports = app;
