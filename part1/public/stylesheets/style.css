@@ -106,8 +106,12 @@ body {
   20%{
     border-color: darkorange;
   }
-  
+  40%{
+    border-color: hotpink;
+  }
+  60%{border-color: ;}
 }
+
 
 
 
