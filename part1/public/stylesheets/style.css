@@ -38,8 +38,8 @@ body {
 
 .dog-details-section {
   position: absolute;
-  top: 100px;
-  left: 200px;
+  top: 200px;
+  left: 20px;
   color:purple;
   font-size: 14px;
   opacity: 0;
