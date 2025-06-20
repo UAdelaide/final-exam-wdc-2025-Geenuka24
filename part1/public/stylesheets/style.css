@@ -42,12 +42,11 @@ body {
   left: 20px;
   color:#cccccc;
   font-size: 14px;
-  /* opacity: 0; */
+  opacity: 0;
   transition: opacity 0.5s;
   background-color: #e0e0e0;
   padding: 10px;
   animation: pulseBackground 1.5s infinite, flickerBackground 0.5s infinite;
-  /* z-index: 15; */
 }
 
 .action-button-section {
