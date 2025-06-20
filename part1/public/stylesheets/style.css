@@ -137,7 +137,11 @@ body {
   animation: rainbowBorder 2s infinite;
 }
 
-.dog-details
+.dog-details-section:hover{
+  opacity: 1;
+}
+
+.ac
 
 a {
   color: #00B7FF;
