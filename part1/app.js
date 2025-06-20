@@ -73,7 +73,8 @@ let db;
                     ((SELECT dog_id FROM Dogs WHERE name = 'foo' AND owner_id = (SELECT user_id FROM Users WHERE username = 'carol123')), '2025-06-13 16:00:00', 45, 'Beachside Ave', 'open')
                     `);
                 }
-                console.log('Database ')
+                console.log('Database setup  is working');
+                
     }
 });
 module.exports = app;
