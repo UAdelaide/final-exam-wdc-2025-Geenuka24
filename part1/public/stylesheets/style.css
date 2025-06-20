@@ -99,7 +99,11 @@ body {
   }
 }
 
-@keyframes rainbow
+@keyframes rainbowBorder{
+  0%{
+    border-color: ;
+  }
+}
 
 
 
