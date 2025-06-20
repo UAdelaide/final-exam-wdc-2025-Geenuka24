@@ -13,8 +13,11 @@ body {
 .header-section{
   padding:10px;
   color: #cccccc;
-  animation:
+  animation: flickerBackground 0.5s infinite;
 }
+
+.flicker
+
 a {
   color: #00B7FF;
 }
