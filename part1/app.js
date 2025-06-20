@@ -114,7 +114,7 @@ app.get('/api/walkrequests/open', async(req,res)=> {
             res.json(rows);
     }
     catch (err){
-        res.status(500).json({error: 'Failed to fetch '})
+        res.status(500).json({error: 'Failed to open walkrequeest '});
     }
 })
 module.exports = app;
