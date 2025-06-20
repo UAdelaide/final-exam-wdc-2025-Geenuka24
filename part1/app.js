@@ -105,7 +105,8 @@ app.get('/api/walkrequests/open', async(req,res)=> {
             WalkRequests.requested_time,
             WalkRequests.durtion_mintues,
             WalkRequests.location,
-            Users`)
+            Users.username owner_username
+            `)
     }
 })
 module.exports = app;
