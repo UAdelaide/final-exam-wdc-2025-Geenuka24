@@ -88,6 +88,7 @@ app.get('/api/dogs', async(req,res)=>{
             FROM Dogs
             JOIN Users ON Dogs.owners_id = Users.user_id
             ORDER BY Dogs.name`);
+            res.json(rows);
     }
 })
 module.exports = app;
