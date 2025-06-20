@@ -61,7 +61,7 @@ let db;
                 `);
             }
             // WalkRequests
-
+            const
     }
 });
 module.exports = app;
