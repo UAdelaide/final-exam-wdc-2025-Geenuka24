@@ -46,10 +46,10 @@
                     this.dogImage=data.message;
                 })
                 .catch(error => {
-                    console.error("Dog image error")
-                })
+                    console.error("Dog image error", error);
+                });
             }
-        })
+        }).mount
     </script>
     <h1>Express</h1>
     <p>Welcome to Express</p>
