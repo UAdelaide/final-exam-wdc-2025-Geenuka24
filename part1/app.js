@@ -30,7 +30,9 @@ async()=>{
         });
         await connection.query("CREATE DATABASE IF NOT EXITS DogWalkService");
         await connection.end();
-        db=await
+        db=await mysql.createConnection({
+            host:'localhost',
+        })
     }
 }
 module.exports = app;
