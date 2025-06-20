@@ -59,11 +59,11 @@ let db;
                 (SELECT user_id FROM Users WHERE username = 'kobe824'),'Mamba', 'large'),
                 (SELECT user_id FROM Users WHERE username = 'carol123'),'foo', 'large');
                 `);
-            }
-            // WalkRequests
-            const [requestRows]= await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
-            if(requestRows[0].count ===0){
-                await db.execute(`
+        }
+        // WalkRequests
+        const [requestRows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRequests');
+        if (requestRows[0].count === 0) {
+            await db.execute(`
                     INSERT INTO WalkRequests(dog_id, requested_time, duration_minutes,location,status)
                     VALUES
                     ((SELECT dog_id FROM Dogs WHERE name = 'Max' AND owner_id = (SELECT user_id FROM Users WHERE username = 'alice123')),'2025-06-10 08:00:00', 30, 'Parklands','open'),
@@ -72,31 +72,31 @@ let db;
                     ((SELECT dog_id FROM Dogs WHERE name = 'Mamba' AND owner_id = (SELECT user_id FROM Users WHERE username = 'kobe824')), '2025-06-12 14:00:00', 30,'Parklands', 'completed'),
                     ((SELECT dog_id FROM Dogs WHERE name = 'foo' AND owner_id = (SELECT user_id FROM Users WHERE username = 'carol123')), '2025-06-13 16:00:00', 45, 'Beachside Ave', 'open')
                     `);
-                }
-                console.log('Database setup  is working');
-            } catch (err){
-                console.error("error setting up the database", err);
-            }
+        }
+        console.log('Database setup  is working');
+    } catch (err) {
+        console.error("error setting up the database", err);
+    }
 })();
 
 // API DOGS
-app.get('/api/dogs', async(req,res) => {
-    try{
-        var[rows]=await db.execute(`
+app.get('/api/dogs', async (req, res) => {
+    try {
+        var [rows] = await db.execute(`
             SELECT Dogs.name dog_name, Dogs.size, Users.username owners_username
             FROM Dogs
             JOIN Users ON Dogs.owner_id = Users.user_id
             ORDER BY Dogs.name`);
-            res.json(rows);
-    } catch(err){
+        res.json(rows);
+    } catch (err) {
         res.status(500).json({ error: 'Failed to fetch dogs' });
     }
 });
 
 // API  WALKREQUESTS
-app.get('/api/walkrequests/open', async(req,res) => {
-    try{
-        var[rows]=await db.execute(`
+app.get('/api/walkrequests/open', async (req, res) => {
+    try {
+        var [rows] = await db.execute(`
             SELECT
             WalkRequests.request_id,
             Dogs.name dog_name,
@@ -109,21 +109,21 @@ app.get('/api/walkrequests/open', async(req,res) => {
             JOIN Users ON Dogs.owner_id= Users.user_id
             WHERE WalkRequests.status = 'open'
             ORDER BY WalkRequests.requested_time`);
-            res.json(rows);
-    } catch (err){
+        res.json(rows);
+    } catch (err) {
         res.status(500).json({ error: 'Failed to open walkrequeest ' });
     }
 });
 
 // API WALKERS SUMMARY
-app.get('/api/walkers/summary', async(req,res) => {
-    try{
-        var[rows]=await db.execute(`
+app.get('/api/walkers/summary', async (req, res) => {
+    try {
+        var [rows] = await db.execute(`
             SELECT
-            Users.username walker_username,
-            COUNT(WalkRatings.rating) total_rating,
-            AVG(WalkRatings.rating) average_rating,
-            SUM(CASE WHEN WalkRequests.status='completed' THEN 1 ELSE 0 END) completed_walks
+                Users.username walker_username,
+                COUNT(WalkRatings.rating) total_rating,
+                AVG(WalkRatings.rating) average_rating,
+                SUM(CASE WHEN WalkRequests.status='completed' THEN 1 ELSE 0 END) completed_walks
             FROM Users
             LEFT JOIN WalkApplications ON Users.user_id = WalkApplications.walker_id
             AND WalkApplications.status='accepted'
@@ -131,8 +131,8 @@ app.get('/api/walkers/summary', async(req,res) => {
             WHERE Users.role='walker'
             GROUP BY Users.user_id, Users.username
             ORDER BY Users.username`);
-            res.json(rows);
-    } catch(err){
+        res.json(rows);
+    } catch (err) {
         res.status(500).json({ error: 'Failed to take walkers summary' });
     }
 });
