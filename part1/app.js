@@ -28,6 +28,9 @@ async()=>{
             user: 'root',
             password: ''
         });
+        await connection.query("CREATE DATABASE IF NOT EXITS DogWalkService");
+        await connection.end();
+
     }
 }
 module.exports = app;
