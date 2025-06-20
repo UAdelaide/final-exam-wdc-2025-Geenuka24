@@ -116,5 +116,8 @@ app.get('/api/walkrequests/open', async(req,res)=> {
     catch (err){
         res.status(500).json({error: 'Failed to open walkrequeest '});
     }
-})
+});
+
+// API WALKERS SUMMARY
+app.get()
 module.exports = app;
