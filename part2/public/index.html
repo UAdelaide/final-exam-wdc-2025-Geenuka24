@@ -58,7 +58,8 @@
               body: JSON.stringify({user: this.username, pass:this.password}),
             });
             if(response.ok){
-              const data = await response.text()
+              const data = await response.text();
+              alert('Welcome ${data}`)
             }
           }
         }
