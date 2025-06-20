@@ -36,7 +36,8 @@ async()=>{
             password:'',
             database:'DogWalkService'
         });
-        
+
+        var [userRows]
     }
 }
 module.exports = app;
