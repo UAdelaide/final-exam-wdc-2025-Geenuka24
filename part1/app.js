@@ -19,6 +19,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 var dbConfig = {
-  host
+  host: 'localhost',
+  user: 'root'
 
 module.exports = app;
