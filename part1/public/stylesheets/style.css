@@ -41,7 +41,9 @@ body {
   top: 150px;
   left:20px;
   color:#cccccc;
-  font-size: ;
+  font-size: 14px;
+  opacity: 0;
+  transition:opac
 }
 
 a {
