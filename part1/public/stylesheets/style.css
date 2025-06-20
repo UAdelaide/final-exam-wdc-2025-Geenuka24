@@ -18,7 +18,7 @@ body {
 
 .flicker-section {
   position: absolute;
-  top: 60px;
+  top: 100px;
   left: 0;
   width: 100%;
   background-color: #f0f0f0;
@@ -38,7 +38,7 @@ body {
 
 .dog-details-section {
   position: absolute;
-  top: 200px;
+  top: 100px;
   left: 20px;
   color:purple;
   font-size: 14px;
