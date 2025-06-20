@@ -125,7 +125,8 @@ app.get('api/walkers/summary', async(req,res)=>{
             SELECT
             Users.username walker_username,
             COUNT(WalkRatings.rating) total_rating,
-            AVG(WalkRating.rating) average_rating`)
+            AVG(WalkRating.rating) average_rating,
+            SUM(CASE WHEN)`)
     }
 })
 module.exports = app;
