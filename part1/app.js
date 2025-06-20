@@ -21,7 +21,7 @@ app.use('/users', usersRouter);
 
 let db;
 
-async()=>{
+(async()=>{
     try{
         const connection =await mysql.createConnection({
             host:'localhost',
@@ -39,5 +39,5 @@ async()=>{
 
         var [userRows]= await.db.execute('S')
     }
-}
+})
 module.exports = app;
