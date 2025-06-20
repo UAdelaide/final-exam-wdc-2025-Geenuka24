@@ -43,7 +43,7 @@ body {
   color:purple;
   font-size: 14px;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 15s;
   background-color: #e0e0e0;
   padding: 10px;
   animation: pulseBackground 15s infinite, flickerBackground 10s infinite;
