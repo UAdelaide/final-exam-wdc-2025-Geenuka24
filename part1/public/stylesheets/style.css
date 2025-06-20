@@ -49,6 +49,10 @@ body {
   animation: pulseBackground 1.5s infinite, flickerBackground 0.5s infinite;
 }
 
+.action-button-section{
+  position: ;
+}
+
 a {
   color: #00B7FF;
 }
