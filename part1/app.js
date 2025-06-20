@@ -44,7 +44,7 @@ let db;
                 ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
                 ('carol123', 'carol@example.com', 'hashed789', 'owner'),
                 ('kobe824', 'kobe@example.com', 'hashed007', 'walker'),
-                ('jordan623', 'jordan@example.com', 'hashed824', 'owner');`)
+                ('jordan623', 'jordan@example.com', 'hashed824', 'owner')`);
         }
     }
 });
