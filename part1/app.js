@@ -96,5 +96,9 @@ app.get('/api/dogs', async(req,res)=>{
 });
 
 // API  WALKREQUESTS
-app.get('/api/walkrequest')
+app.get('/api/walkrequests/open', async(req,res)=> {
+    try{
+        
+    }
+})
 module.exports = app;
