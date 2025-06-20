@@ -126,11 +126,11 @@ body {
     transform: translateX(0);
   }
   100%{
-    transform: tra;
+    transform: translateX(100px);
   }
 }
 
-
+.dog
 
 a {
   color: #00B7FF;
