@@ -10,7 +10,8 @@ app.use(express.json());
 app.use(session({
     secret:'';
     resave:false;
-    saveUninitialised
+    saveUninitialised:false;
+    cookie:{secure: false}
 }))
 app.use(express.static(path.join(__dirname, '/public')));
 
