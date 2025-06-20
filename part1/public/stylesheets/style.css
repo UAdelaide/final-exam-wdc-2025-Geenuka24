@@ -44,7 +44,7 @@ body {
   font-size: 14px;
   opacity: 0;
   transition: opacity 15s;
-  background-color: #a10c0c;
+  background-color: #e0e0e0;
   padding: 10px;
   animation: pulseBackground 1.5s infinite, flickerBackground 0.5s infinite;
   z-index: 15;
