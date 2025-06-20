@@ -111,8 +111,10 @@ body {
   }
   60%{border-color: magenta;}
   80%{border-color: tan;}
-  100%{border-color: ;}
+  100%{border-color: midnightblue;}
 }
+
+@keyframes
 
 
 
