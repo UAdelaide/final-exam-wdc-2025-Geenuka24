@@ -53,8 +53,7 @@ let db;
         if(dogRows[0].count ===0){
             await db.execute(`
                 INSERT INTO Dogs(owner_id, name, size)
-                VALUES
-                (())`)
+                VALUES ((SELECT user_id FROM Users WHERE username=))`)
         }
     }
 });
