@@ -49,6 +49,8 @@ let db;
         }
 
         // Dogs table
+        var [userRows]= await db.execute('SELECT COUNT(*) AS count FROM Users');
+
     }
 });
 module.exports = app;
