@@ -120,7 +120,6 @@
           }
         }
         // logout function
-        methods: {
         async logout() {
             try {
               const response = await fetch('/api/users/logout', {
@@ -138,7 +137,7 @@
               console.error("Logout error", error);
             }
           }
-        }
+        
         //end of loguut
 
         onMounted(() => {
