@@ -39,7 +39,9 @@
         </tr>
       </thread>
       <tbody>
-        <tr v-for="dogs" :key
+        <tr v-for="dogs" :key="dog.dog_id">
+          <td>{{dog.dog_id}}</td>
+        </tr>
       </tbody>
     </table>
     <!-- delete this -->
