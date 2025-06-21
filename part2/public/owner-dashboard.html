@@ -118,6 +118,10 @@
             error.value="Failed to load owners dogs";
           }
         }
+        onMounted(async()=>{
+          await loadOwnerDogs();
+          load
+        })
 
         async function submitWalkRequest() {
           try {
