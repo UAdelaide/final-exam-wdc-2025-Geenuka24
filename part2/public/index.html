@@ -68,8 +68,8 @@
               window.location.href = data.role === 'owner' ? '/owner-dashboard.html' : '/walker-dashboard.html';
             }
             else {
-              const error
-              alert('Login failed');
+              const error=await response.json();
+              alert(error.error || 'Login failed');
             }
           }
           catch (error) {
