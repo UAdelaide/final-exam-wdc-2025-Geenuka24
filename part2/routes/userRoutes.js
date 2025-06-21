@@ -69,6 +69,7 @@ router.post('/logout', async (req,res) => {
   });
 });
 
-// Post on getting 
+// Post on getting owners dogs
+router.get('/dogs', async(req,res)=>)
 
 module.exports = router;
