@@ -75,7 +75,9 @@ router.get('/dogs', async(req,res)=>{
     const[rows]=await db.query('SELECT dog_id, name FROM Dogs WHERE owner_id = ?', [req.query.owner_id]);
     res.json(rows);
   }
-  catch(error)
+  catch(error){
+    res.status(500).json({error})
+  }
 })
 
 module.exports = router;
