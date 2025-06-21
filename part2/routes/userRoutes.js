@@ -87,7 +87,7 @@ router.get('/dogs', async(req,res)=>{
       res.json(dogs);
 
   }catch(err){
-    res.status
+    res.status(500).json({error: ''})
   }
 })
 
