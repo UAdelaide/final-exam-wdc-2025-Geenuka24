@@ -70,10 +70,10 @@ router.post('/logout', async (req,res) => {
 });
 
 // Post on getting owners dogs
-router.get('/dogs/:ownerId', async(req,res) => {
+router.get('/dogs/:owner', async(req,res) => {
   try{
-    const[rows]= await db.query('SELECT dog_id, name FROM Dogs WHERE owner_id = ?', [req.query.owner_id]);
-    res.json(rows.length ? rows : []);
+    const[rows]=await db.query('SELECT dog_id, name FROM Dogs WHERE owner_id = ?', [req.query.owner_id]);
+    res.json(rows);
   } catch(error){
     res.status(500).json({ error: 'Failed to fetach the dogs ' });
   }
