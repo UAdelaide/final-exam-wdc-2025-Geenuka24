@@ -87,8 +87,8 @@ router.get('/dogs', async(req,res)=>{
       res.json(dogs);
 
   }catch(err){
-    res.status(500).json({error: ''})
+    res.status(500).json({error: 'Failed to fetch dogs'});
   }
-})
+});
 
 module.exports = router;
