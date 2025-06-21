@@ -81,6 +81,26 @@
             message.value = '';
           }
         }
+        // logout function
+        async function logout() {
+          try {
+            const response = await fetch('/api/users/logout', {
+              method: 'POST',
+              credentials: 'include'
+            });
+            if (response.ok) {
+              window.location.href = 'index.html';
+            }
+            else {
+              alert("logout failed");
+            }
+          }
+          catch (error) {
+            console.error("Logout error", error);
+          }
+        }
+
+        //end of loguut
 
         onMounted(() => {
           loadWalkRequests();
