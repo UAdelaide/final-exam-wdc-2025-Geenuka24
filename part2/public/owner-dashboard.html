@@ -33,7 +33,7 @@
             <label class="form-label">Select Dog</label>
             <select v-model="form.dog_id" class="form-select" required>
               <option value="" disabled selected>-- Choose a dog --</option>
-              <option v-for="dog in ownerDogs" :key=""
+              <option v-for="dog in ownerDogs" :key="dog.dog_id" :value="dog.dog"
           </div>
           <div class="mb-3">
             <label class="form-label">Requested Date & Time</label>
