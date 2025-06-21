@@ -7,6 +7,7 @@ const app = express();
 
 // Middleware
 app.use(express.json());
+// this handles the session 
 app.use(session({
     secret: ' ',
     resave: false,
