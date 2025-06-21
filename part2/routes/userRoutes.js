@@ -70,6 +70,10 @@ router.post('/logout', async (req,res) => {
 });
 
 // Post on getting owners dogs
-router.get('/dogs', async(req,res)=>)
+router.get('/dogs', async(req,res)=>{
+  try{
+    const[rows]=await
+  }
+})
 
 module.exports = router;
