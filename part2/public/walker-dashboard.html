@@ -57,7 +57,8 @@
         // get current users
         async function getCurrentUsers() {
           try{
-            const res=await fetch('')
+            const res=await fetch('/api/users/me');
+            if(!res.ok)
           }
         }
         async function loadWalkRequests() {
