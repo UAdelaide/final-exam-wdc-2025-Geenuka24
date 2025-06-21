@@ -16,7 +16,7 @@
     <header>
     <!-- Logout button  -->
 
-    <button  @click="logOut">Logout</button>
+    <button  @click="logout">Logout</button>
 
   </header>
 
@@ -127,7 +127,7 @@
         // logout function
           async function logout() {
             try {
-              const response = await fetch('/api/logout', {
+              const response = await fetch('/api/users/logout', {
                 method: 'POST',
                 credentials: 'include'
               });
