@@ -110,7 +110,8 @@
           try{
             const res=await fetch('/api/users/me');
             const user= await res.json();
-            const ownerId
+            const ownerId= user.id;
+            const dogRes= await fetch
           }
         }
 
