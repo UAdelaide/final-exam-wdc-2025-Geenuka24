@@ -117,6 +117,7 @@
         //end of loguut
 
         onMounted(() => {
+          await getCurrentUsers();
           loadWalkRequests();
         });
 
