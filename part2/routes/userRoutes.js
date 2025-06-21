@@ -80,6 +80,8 @@ router.get('/dogs', async(req,res) => {
 });
 
 // Get API dogs
-router.get('/dogs')
+router.get('/dogs', async(req,res)=>{
+  try{}
+})
 
 module.exports = router;
