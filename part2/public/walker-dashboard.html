@@ -56,15 +56,15 @@
 
         // get current users
         async function getCurrentUsers() {
-          try{
-            const res=await fetch('/api/users/me');
-            if(!res.ok)
-            throw new Error('Failed to get users');
-          const userData=await res.join();
-          user.value=userData.id;
+          try {
+            const res = await fetch('/api/users/me');
+            if (!res.ok)
+              throw new Error('Failed to get users');
+            const userData = await res.join();
+            user.value = userData.id;
           }
-          catch(err){
-            error.value="Couldnt get current user" + err.message;
+          catch (err) {
+            error.value = "Couldnt get current user" + err.message;
           }
         }
         async function loadWalkRequests() {
@@ -116,7 +116,7 @@
         }
         //end of loguut
 
-        onMounted(async() => {
+        onMounted(async () => {
           await getCurrentUsers();
           loadWalkRequests();
         });
