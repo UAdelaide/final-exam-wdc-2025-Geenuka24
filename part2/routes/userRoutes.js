@@ -59,7 +59,7 @@ router.post('/login', async (req, res) => {
 });
 
 // POST LOGOUT
-router.post('/logout',(req,res) => {
+router.post('/logout', async (req,res) => {
   req.session.destroy((err) => {
     if(err){
       return res.status(500).json({ error: 'Logout failed' });
