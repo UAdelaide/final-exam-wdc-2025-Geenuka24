@@ -63,7 +63,9 @@
           const userData=await res.join();
           user.value=userData.id;
           }
-          catch(err)
+          catch(err){
+            error.value="FA"
+          }
         }
         async function loadWalkRequests() {
           try {
