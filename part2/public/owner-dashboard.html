@@ -123,7 +123,8 @@
         onMounted(() => {
           loadWalks();
         });
-                // logout function
+        // logout function
+        methods:{
         async logout() {
             try {
               const response = await fetch('/api/users/logout', {
@@ -140,7 +141,7 @@
             catch (error) {
               console.error("Logout error", error);
             }
-          }
+          }}
 
         //end of loguut
 
