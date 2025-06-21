@@ -123,10 +123,9 @@
           }
         }
         // logout function
-        methods: {
           async function logout() {
             try {
-              const response = await fetch('/api/users/logout', {
+              const response = await fetch('/api/logout', {
                 method: 'POST',
                 credentials: 'include'
               });
@@ -140,7 +139,7 @@
             catch (error) {
               console.error("Logout error", error);
             }
-          }}
+          }
 
           //end of loguut
 
