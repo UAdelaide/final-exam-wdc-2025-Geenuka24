@@ -89,7 +89,10 @@
               alert("logout failed");
             }
           }
-          catch(error)
+          catch(error){
+            console.error("Logout error", error);
+            
+          }
           }
       }
       //end of loguut
