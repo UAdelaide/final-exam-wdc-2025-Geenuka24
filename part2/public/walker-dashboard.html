@@ -64,7 +64,7 @@
           user.value=userData.id;
           }
           catch(err){
-            error.value="FA"
+            error.value="Couldnt get current user" + err.message;
           }
         }
         async function loadWalkRequests() {
