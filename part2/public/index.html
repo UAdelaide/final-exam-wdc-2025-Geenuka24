@@ -41,6 +41,9 @@
       <tbody>
         <tr v-for="dogs" :key="dog.dog_id">
           <td>{{dog.dog_id}}</td>
+          <td>{{dog.name}}</td>
+          <td></td>
+
         </tr>
       </tbody>
     </table>
@@ -81,7 +84,7 @@
               window.location.href = data.role === 'owner' ? '/owner-dashboard.html' : '/walker-dashboard.html';
             }
             else {
-              const error=await response.json();
+              const error = await response.json();
               alert(error.error || 'Login failed');
             }
           }
