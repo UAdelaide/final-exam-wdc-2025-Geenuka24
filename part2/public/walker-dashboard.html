@@ -82,6 +82,7 @@
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
+              // chnaged here
               body: JSON.stringify({ walker_id: user.value })
             });
             const result = await res.json();
