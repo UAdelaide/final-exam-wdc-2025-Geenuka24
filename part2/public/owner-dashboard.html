@@ -129,16 +129,6 @@
           error,
           submitWalkRequest
         };
-        methods:{
-          async logout(){
-            try{
-              const response= await fetch('/api/users/logout',{
-                method:'POST',
-                credentials:'include'
-              });
-            }
-          }
-        }
       }
     }).mount('#app');
   </script>
