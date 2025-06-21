@@ -83,7 +83,7 @@ router.get('/dogs', async(req,res) => {
 router.get('/dogs', async(req,res)=>{
   try{
     const[dogs]= await db.query(`
-      SELECT`)
+      SELECT dog_id, owner_id `)
   }
 })
 
