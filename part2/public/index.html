@@ -64,7 +64,6 @@
             });
             if (response.ok) {
               const data = await response.json();
-              alert(`Welcome ${data.message}`);
               window.location.href = data.role === 'owner' ? '/owner-dashboard.html' : '/walker-dashboard.html';
             }
             else {
