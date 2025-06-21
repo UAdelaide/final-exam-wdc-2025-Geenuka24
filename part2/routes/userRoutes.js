@@ -82,7 +82,8 @@ router.get('/dogs', async(req,res) => {
 // Get API dogs
 router.get('/dogs', async(req,res)=>{
   try{
-    const[dogs]= await db.query(Se)
+    const[dogs]= await db.query(`
+      SELECT`)
   }
 })
 
