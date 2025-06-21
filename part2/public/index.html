@@ -50,7 +50,7 @@
       methods: {
         async login() {
           console.log('Username: ', this.username, 'Password: ', this.password);
-          if (!this.username || this.password) {
+          if (!this.username || !this.password) {
             alert('Please enter username and password');
             return;
           }
