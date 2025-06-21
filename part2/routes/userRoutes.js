@@ -84,6 +84,8 @@ router.get('/dogs', async(req,res)=>{
   try{
     const[dogs]= await db.query(`
       SELECT dog_id, owner_id, name, size FROM Dogs`);
+      res.json(dogs);
+      
   }
 })
 
