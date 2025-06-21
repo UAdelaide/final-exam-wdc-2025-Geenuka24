@@ -119,6 +119,10 @@
             message.value = '';
           }
         }
+
+        onMounted(() => {
+          loadWalks();
+        });
                 // logout function
         async logout() {
             try {
@@ -139,9 +143,6 @@
           }
 
         //end of loguut
-        onMounted(() => {
-          loadWalks();
-        });
 
 
         return {
