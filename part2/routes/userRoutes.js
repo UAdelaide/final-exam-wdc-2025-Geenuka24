@@ -52,7 +52,6 @@ router.post('/login', async (req, res) => {
     }
     const user = rows[0];
     req.session.user = { id: user.user_id, username: user.username, role: user.role };
-    // res.redirect(redirectURl);
     res.json({ message: 'Login successful', role: user.role });
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
