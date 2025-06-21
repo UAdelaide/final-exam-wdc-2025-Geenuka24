@@ -58,9 +58,8 @@
         async function getCurrentUsers() {
           try {
             const res = await fetch('/api/users/me');
-            if (!res.ok)
-              throw new Error('Failed to get users');
-            const userData = await res.join();
+            if (!res.ok) throw new Error('Failed to get users');
+            const userData = await res.json();
             user.value = userData.id;
           }
           catch (err) {
