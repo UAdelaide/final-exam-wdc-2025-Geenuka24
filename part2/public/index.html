@@ -31,13 +31,13 @@
     <!-- Dog table api -->
     <h2 class="mt-4"> All Dogs in Database</h2>
     <table v-if="dogs.length" class="table table-striped">
-      <thread>
+      <thead>
         <tr>
           <th>Dog ID</th>
           <th>Name</th>
           <th>Photo</th>
         </tr>
-      </thread>
+      </thead>
       <tbody>
         <tr v-for="dogs" :key="dog.dog_id">
           <td>{{dog.dog_id}}</td>
@@ -46,7 +46,7 @@
         </tr>
       </tbody>
     </table>
-    
+
     <!-- delete this -->
     <!-- <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
     <a href="walker-dashboard.html" class="btn btn-outline-success">Walker Dashboard</a> -->
