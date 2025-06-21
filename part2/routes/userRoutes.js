@@ -79,6 +79,7 @@ router.get('/dogs', async(req,res) => {
   }
 });
 
-// Get 
+// Get API dogs
+router.get('/dogs')
 
 module.exports = router;
