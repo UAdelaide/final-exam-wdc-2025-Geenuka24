@@ -133,7 +133,8 @@
           async logout(){
             try{
               const response= await fetch('/api/users/logout',{
-                method
+                method:'POST',
+                credentials:'include'
               });
             }
           }
