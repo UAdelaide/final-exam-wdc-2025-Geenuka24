@@ -72,8 +72,10 @@ router.post('/logout', async (req,res) => {
 // Post on getting owners dogs
 router.get('/dogs', async(req,res)=>{
   try{
-    const[rows]=await db.query('SELECT dog_id, name FROM Dogs WHERE owner_id = ?', [req.query])
+    const[rows]=await db.query('SELECT dog_id, name FROM Dogs WHERE owner_id = ?', [req.query.owner_id]);
+    res.json(rows);
   }
+  catch(error)
 })
 
 module.exports = router;
