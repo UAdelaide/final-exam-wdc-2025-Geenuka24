@@ -112,7 +112,7 @@
             const user= await res.json();
             const ownerId= user.id;
             const dogRes= await fetch(`/api/dogs?owner_id= ${ownerId}`);
-            
+            ownerDogs.value= await dogRes.json();
           }
         }
 
