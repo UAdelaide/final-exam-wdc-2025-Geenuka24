@@ -65,19 +65,18 @@ router.post('/logout', async (req,res) => {
       return res.status(500).json({ error: 'Logout failed' });
     }
     res.clearCookie('connect.sid');
-    res.json({message : "logout "});
+    res.json({ message: "logout " });
   });
 });
 
 // Post on getting owners dogs
-router.get('/dogs', async(req,res)=>{
+router.get('/dogs', async(req,res) => {
   try{
     const[rows]=await db.query('SELECT dog_id, name FROM Dogs WHERE owner_id = ?', [req.query.owner_id]);
     res.json(rows);
+  } catch(error){
+    res.status(500).json({ error: 'Failed to fetach the dogs ' });
   }
-  catch(error){
-    res.status(500).json({error})
-  }
-})
+});
 
 module.exports = router;
